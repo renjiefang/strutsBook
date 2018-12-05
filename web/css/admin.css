@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+ul {
+    list-style: none
+}
+
+body {
+    background-color: #333;
+}
+
+.nav {
+    width: 500px;
+    height: 42px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.nav li {
+    width: 100px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    float: left;
+    cursor: pointer;
+}
+
+.nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 83px;
+    height: 42px;
+    background: url('../images/cloud.gif') no-repeat;
+}
+a{
+    text-decoration: none;
+}
+
+ul {
+    position: relative;
+}
+
+#ul1 {
+    width:600px;
+    height:300px;
+    border:1px solid black;
+    margin:10px auto;
+    border-radius:10px;
+}
+#ul1 div {
+    list-style:none;
+    border-bottom:1px dashed #999;
+    padding:2px;
+    overflow:hidden;
+    filter:alpha(opacity:0);
+    opacity:0;
+    color:white;
+}
+
+.info{
+    margin-left:410px;
+}
+textarea{
+    display:block;
+    width: 600px;
+    height: 90px;
+    margin:20px auto;
+}
+#btn1{
+    display:block;
+    margin-left: 968px;
+    margin-top: -26px;
+    width: 50px;
+    height: 20px;
+
+}

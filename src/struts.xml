@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" /> <!-- 动态方法配置 -->
+    <package name="ss" extends="struts-default" namespace="/">
+
+
+        <action name="LoginAction" class="ss.LoginRegisterAction">
+            <result name="input">/index.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="success" type="chain">showBookAction</result>
+        </action>
+        <action name="*Action1" class="ss.LoginRegisterAction" method="{1}">
+            <result name="input">/index.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="success1">/success1.jsp</result>
+            <result name="success">/success.jsp</result>
+        </action>
+        <action name="*Action" class="ss.BooksAction" method="{1}">
+            <param name="photoSavePath">/photo</param>
+            <result name="login">/index.jsp</result>
+            <result name="success1">/showBook1.jsp</result>
+            <result name="success">{1}.jsp</result>
+            <result name="add">/showBook1.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="update">/showBook1.jsp</result>
+            <result name="input">/addBook.jsp</result>
+        </action>
+
+        <action name="getBook" class="ss.BooksAction" method="getBookById">
+             <result>/updateBook.jsp</result>
+        </action>
+
+        <action name="delBook" class="ss.BooksAction" method="deleteBook">
+             <result name="success">/showBook1.jsp</result>
+        </action>
+        <action name="stulist" class="ss.BooksAction" method="getAllList">
+            <result>/showBook1.jsp</result>
+        </action>
+
+    </package>
+
+</struts>
